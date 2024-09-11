@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-website-layout-nissa</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Selamat datang di website</h1>
+      <p class="nama">Nissa Ika Rachmawati</p>
+    </div>
+
+    <div class="topnav">
+      <a href="#Home" style="float: left;">Home</a>
+      <a href="#aboutme" style="float: left;">About me</a>
+      <a href="#Skill" style="float: left;">Skill</a>
+      <a href="#Galeri" style="float: left;">Galeri</a>
+      <a href="#Contact" style="float: left;">Contact</a>
+      <div class="logo"><img src="logo.png" alt="Logo"></div>
+    </div>
+
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2 id="Home">Home</h2>
+          <div class="fakeimg" style="height:350px; overflow: hidden;">
+           <video controls style="width: 100%; height: 100%; object-fit: cover;" src="intro.mp4"></video>
+          </div>          
+        </div>
+
+        <div class="card"> <!-- Kartu kedua di kolom kiri -->
+          <h2 id="Skill">Skill</h2> <!-- Judul artikel kedua -->
+          <h5>Mulai belajar pada, Nov 1, 2023</h5> <!-- Keterangan judul dan tanggal kedua -->
+          <p>Saya berada di Jurusan Rekayasa Perangkat Lunak, mempelajari IT (Ilmu Teknologi) Khususnya tentang Software.</p>
+          <div class="container">
+            <h3>Daftar Project</h3>
+            <ul class="skill-list">
+            <li>Membuat curriculum Vitae, dengan menggunakkan HTML</br>
+            klik disini untuk melihat <a href="curricullumvitae.html" target="_blank">Curricullumvitae nissa</a></li></br>
+  
+            <li>Membuat form isian dan Video, dengan menggunakkan HTML dan CSS
+            klik disini untuk melihat <a href="form.html" target="_blank">Form isian dan video</a></li></br>
+  
+            <li>Dan yang anda lihat sekarang membuat website dengan merubah copy paste dari w3schools</li>
+  
+           <P>Mungkin untuk saat ini, saya baru mempelajari dasar-dasar bahasa pemograman. Kedepannya saya akan terus meningkatkan kemampuan saya dan dapat menguasai bidang ini.
+          
+          </div>
+        </div>
+         
+        <div class="card">
+          <h3 id="Contact">Medsos</h3>
+          <div class="icon-wrapper">
+            <!-- Menggunakan ikon Bootstrap dengan kelas khusus -->
+            <div class="icon-background">
+            <a href="https://wa.me/6282129895029" target="_blank"><i class="bi bi-whatsapp icon-custom"></i></a></div>
+            <div class="icon-background">
+            <a href="https://www.instagram.com/nisaja26/" target="_blank"><i class="bi bi-instagram icon-custom"></i></a></div>
+            <div class="icon-background">
+            <a href="https://github.com/Nisaja26" target="_blank"><i class="bi bi-github"></i></a></div>
+            <div class="icon-background">
+            <a href="https://www.tiktok.com/@nayica16" target="_blank"><i class="bi bi-tiktok icon-custom"></i></a></div>
+            <div class="icon-background">
+            <a href="https://www.youtube.com/@nissatv7348" target="_blank"><i class="bi bi-youtube icon-custom"></i></a></div>
+          </div>
+        </div>        
+      </div>
+
+      <div class="rightcolumn"> <!-- Kolom kanan untuk sidebar -->
+        <div class="card-aboutme"> <!-- Kartu pertama di kolom kanan (Galeri) -->
+          <h2 id="aboutme">Tentang saya</h2> <!-- Judul untuk bagian "Galeri" -->
+          <h5>Lahir pada, Okt 2, 2006</h5>
+          <img src="foto-nissa.png" class="selfie"> <!-- Placeholder gambar -->
+          <p>Hallo! nama saya Nissa Ika Rachmawati</p>
+          <p>Seorang Taruni di SMKN 2 Subang yang berusia 17 tahun, saya masih duduk di kelas 11 SMK.</p> <!-- Deskripsi singkat tentang diri -->
+        </div>
+
+        <div class="card">
+          <h3 id="Galeri">Galeri</h3>
+          <img src="kebaya1.jpg" class="zoom" height="200px">
+          <img src="kebaya2.jpg" class="zoom"  height="200px">
+          <img src="monas.jpg" class="zoom"  height="200px">
+          <img src="wepak.jpg" class="zoom"  height="200px">   
+        </div>
+            
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <p class="footer"><b> © <span id="currentYear"></span>Nissa Ika Rachmawati </b></p>
+  </footer>
+
+  <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           const yearSpan = document.getElementById("currentYear");
+           const currentYear = new Date().getFullYear();
+           yearSpan.textContent = currentYear;
+       });
+  </script>
+
+</html>

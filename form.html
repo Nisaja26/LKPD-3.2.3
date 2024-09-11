@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Form Video HTML Nissa</title>
+      <style>
+        body{
+          background-color: #8cc6eb;
+          background-image:url(logostempert.jpg);
+          background-size: 15%;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center center;
+          text-align: justify;
+          font-size: 20px;
+          margin: 20px;
+          padding: 20px;
+        }
+
+        select{
+          color: black;
+          background-color: cornflowerblue;
+        }
+
+        textarea{
+          color: black;
+          background-color: cornflowerblue;
+        }
+
+        input{
+          color: black;
+          background-color: cornflowerblue;
+        }
+                
+        /* CSS untuk video responsif */
+        .fakeimg video {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+        }
+
+        @media only screen and (max-width: 768px) {
+        /* Jika lebar layar kurang dari 768px (HP), video tetap memenuhi layar */
+            .fakeimg video {
+             width: 100%;
+             height: auto;
+             object-fit: contain; /* Ini menjaga agar video tetap proporsional */
+           }
+        }
+
+        
+      </style>
+    </head>
+    <body>
+      <form action="contact.php" method="POST">
+        <fieldset class="col-auto">
+          <!-- untuk memproses data inputan -->
+          <p style="font-size:18px; "><b>Nama Lengkap: &nbsp</b></p> 
+          <input type="text" name="Nama Lengkap">
+
+          <!-- tag input untuk isian text,chekcboox, password, radio dan tombol submit -->
+          <p style="font-size:18px; "><b>Sekolah Asal:</b></p>  
+          &nbsp &nbsp &nbsp <input type="text" name="Sekolah Asal">
+ 
+          <p style="font-size:18px; "> <b>Alamat: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="Alamat"></b></p>
+ 
+         <p style="font-size:18px; "><b>No HP:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="No HP"></b></p>
+ 
+         <p style="font-size:18px; "> <b>Jurusan: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+          <select>
+            <option>RPL</option>
+            <option>ATPH</option>
+            <option>APHP</option>
+            <option>ATU</option>
+            <option>APAT</option>
+            <option>TKN</option>
+            <option>NKN</option>
+            <option>NKPI</option>
+            <option>KULINER</option>
+            <option>DPB</option>
+            <option>ULP</option>
+            <option>TITL</option>
+            <option>TAB</option>
+            <option>TSM</option>
+            <option>TPM</option>
+          </select>
+
+          <p style="font-size:18px; "><b>Jenis Kelamin: &nbsp</b>
+           <input type="radio" name="jk" value="Laki-laki"/> Laki-laki
+           <input type="radio" name="jk" value="Perempuan"/> Perempuan
+          </p>
+          <p style="font-size:18px; "><label>  <b>Tanggal Lahir:</b></label>&nbsp &nbsp &nbsp<input type="date" name="tanggal" /></p>
+  
+          <p style="font-size:18px; "><b>Umur:  </b>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+           <input type="number" min="14" max="21" name="umur" />
+          </p>
+
+          <p style="font-size:18px; "><b>Tempat tinggal: &nbsp &nbsp</b><select>
+            <option>Rumah</option>
+            <option>Asrama</option>
+            <option>Kost</option>
+          </p>  
+         </select>
+
+         <p style="font-size:18px; "><b>Organisasi: 
+          &nbsp &nbsp &nbsp</b>
+          <input type="checkbox" name="Staf Batalyon"> Staf Batalyon
+          <input type="checkbox" name="MPK"> MPK
+          <input type="checkbox" name="Rohis"> Rohis
+          <input type="checkbox" name="Pramuka"> Pramuka
+          <input type="checkbox" name="Marching Band"> Marching Band
+         </p>
+         <p style="font-size:20px; "><b>Alasan anda:&nbsp  &nbsp &nbsp </b></p>
+         <textarea></textarea>
+         <input type="submit" value="Submit"> 
+
+        </fieldset>
+      </form>
+
+      <div class="fakeimg" style="height:400px; overflow: hidden;">
+        <video controls style="width: 100%; height: 100%; object-fit: cover;" src="video-form.mp4"></video>
+      </div>
+       
+    </body>
+</html>

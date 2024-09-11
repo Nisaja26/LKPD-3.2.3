@@ -1,0 +1,246 @@
+/* Atur kotak (box) agar border, padding, dan margin dihitung dalam lebar dan tinggi elemen */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Gaya umum untuk tubuh (body) */
+  body {
+    font-family: Arial; /* Mengatur font menjadi Arial */
+    padding: 15px; /* Menambahkan padding 10px di sekeliling body */
+    background: rgb(253, 228, 253); /* Warna latar belakang abu-abu muda */
+  }
+  
+  /* Header/Judul Blog */
+  .header {
+    background: linear-gradient(rgba(128, 0, 128, 0.7), rgba(250, 206, 250, 0.7)), /* Gradasi warna untuk gambar */ url('d:\foto-web-layout-css\bgheader.jpg') no-repeat center center; 
+    background-size: cover; /* Membuat gambar memenuhi seluruh area header */
+    padding: 20px; /* Menambahkan padding 20px di dalam header */
+    text-align: center; /* Mengatur teks agar rata tengah */
+  }
+  
+  .header h1 {
+    font-size: 8vh; /* Mengatur ukuran font judul menjadi 50px */
+    font-family: 'Georgia', serif; /* jenis huruf yang akan digunakan georgia adalah nama font utama */
+    text-transform: uppercase; /* mengubah semua huruf dalam teks menjadi huruf besar */
+    letter-spacing: 2px; /* jarak antara huruf */
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5); /* menambahkan bayangan pada teks. 5px 5px adalah offset bayangan secara horizontal dan vertikal, 4px adalah tingkat blur, dan rgba(0, 0, 0, 0.5) menentukan warna bayangan hitam dengan transparansi 50%. Bayangan ini memberikan efek 3D */  
+    color: rgb(15, 13, 13);
+    opacity: 0; /* Awalnya tak terlihat */
+    animation: slideIn 2s ease-out forwards; /* Animasi berlangsung 2 detik */
+    animation-delay: 0.5s; /* Memberikan sedikit jeda sebelum animasi dimulai */
+  }
+  
+  .nama {
+    text-transform: inherit;
+    text-decoration: underline;
+    font-size: 3vh;
+    opacity: 0;
+    animation: slideIn 3s ease-out forwards;
+    animation-delay: 1s; /* Animasi dimulai setelah 1 detik */
+
+  }
+  
+  /* Gaya untuk bilah navigasi atas */
+  .topnav {
+    overflow: hidden; /* Menyembunyikan konten yang melampaui ukuran elemen */
+    background-color:rgb(37, 18, 37); /* Warna ungu tua */
+  }
+  
+  /* Gaya untuk tautan di dalam bilah navigasi */
+  .topnav a {
+    display: block; /* Menampilkan tautan sebagai blok */
+    color: rgb(242, 242, 242); /* Warna teks putih */
+    text-align: center; /* Mengatur teks agar rata tengah */
+    padding: 14px 16px; /* Menambahkan padding di dalam tautan */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+  }
+  
+  /* Ubah warna tautan saat di-hover */
+  .topnav a:hover {
+    background-color: rgb(240, 208, 214); /* Warna pink dengan transparansi */
+    color: black; /* Warna teks berubah menjadi hitam */
+    transition-duration: 0.4s; /* Efek transisi */
+  }
+  
+  /* logo img */
+  .topnav .logo img {
+    vertical-align: middle; /* Menyelaraskan gambar secara vertikal */
+    height: 30px; /* Mengatur tinggi gambar */
+    width: auto; /* Menyesuaikan lebar gambar agar tetap proporsional */
+    float: right;
+    margin-top: 10px;
+    margin-right: 6px;
+    border-radius: 50% ;  /* Membuat gambar menjadi bulat */
+  }
+  
+  /* Membuat dua kolom yang tidak sama besar dan mengapung di sebelah satu sama lain */
+  /* Kolom kiri */
+  .leftcolumn {   
+    float: left; /* Mengatur kolom agar mengapung ke kiri */
+    width: 75%; /* Lebar kolom kiri 75% dari lebar halaman */
+  }
+  
+  /* Kolom kanan */
+  .rightcolumn {
+    float: left; /* Mengatur kolom agar mengapung ke kiri */
+    width: 25%; /* Lebar kolom kanan 25% dari lebar halaman */
+    background-color: #f1f1f1; /* Warna latar belakang abu-abu muda */
+    padding-left: 20px; /* Menambahkan padding kiri sebesar 20px */
+  }
+  
+  /* foto  tentang saya */
+  .selfie {
+    height: 25vh;
+    object-fit: cover; /* Menjaga rasio gambar */
+    align-items: center;
+    margin-bottom: 5vh;
+  }
+
+  /* zoom image */
+  .zoom {
+    transition: transform 0.8s ease; /* Transisi yang halus selama 0.5 detik */
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); /* Membesarkan gambar 1.5x saat di-hover */
+  }
+  
+  
+  .card-aboutme {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin-top: 20px;
+    display: flex; /* Menggunakan Flexbox */
+    flex-direction: column; /* Elemen diatur dalam kolom */
+    align-items: center; /* Menyelaraskan elemen ke tengah secara horizontal */
+  }
+  
+  /* Gambar palsu (fake image) */
+  .fakeimg {
+    background-color: #f1f1f1; /* Warna latar belakang abu-abu */
+    width: 100%; /* Lebar gambar palsu 100% dari kontainer */
+    padding: 20px; /* Padding di dalam gambar palsu */
+  }
+  
+  /* Menambahkan efek kartu untuk artikel */
+  .card {
+    background-color: rgb(255, 255, 255); /* Warna latar belakang putih */
+    padding: 20px; /* Menambahkan padding di dalam kartu */
+    margin-top: 20px; /* Menambahkan margin atas 20px */
+    margin-bottom: 50px;
+  }
+  
+  
+  /* Membersihkan float setelah kolom */
+  .row::after {
+    content: ""; /* Konten kosong */
+    display: table; /* Menampilkan elemen sebagai tabel */
+    clear: both; /* Membersihkan pengapungan (float) */
+  }
+  
+  /* keahlian */
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+   }
+   .skill-list li {
+   margin-bottom: 10px;
+   font-size: 18px;
+   }
+   h3 {
+   font-size: 24px;
+   text-align: center;
+   margin-bottom: 20px;
+   }
+  
+   /* style icon */
+  /* Mengatur ikon agar lebih kecil di layar yang lebih kecil */
+  .icon-custom {
+   font-size: 3vh; /* Ukuran ikon lebih kecil di layar kecil */
+   margin-right: 2vh;
+   margin-left: 2vh;
+  }
+  
+  /* Memastikan ikon tetap berada di dalam card pada tampilan kecil */
+  .icon-wrapper {
+   display: flex; /* Mengatur tata letak menggunakan flex */
+   flex-wrap: wrap; /* Membungkus ikon jika tidak muat dalam satu baris */
+   align-items: center;
+   justify-content: center; /* Menyelaraskan ikon secara horizontal */
+   gap: 2vh; /* Mengatur jarak antara ikon */
+   height: auto; /* Biarkan tinggi menyesuaikan otomatis */
+   padding: 10px; /* Tambahkan padding agar ikon tidak terlalu menempel di tepi */
+  }
+
+  
+  .icon-custom:hover {
+    color: rgb(245, 27, 147); /* Warna berubah saat ikon di-hover */
+  }
+  
+  .icon-background {
+    background-color: rgb(211, 211, 211);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px; /* Menambahkan padding di dalam footer */
+    text-align: center; /* Mengatur teks agar rata tengah */
+    background-color: #f1f1f1; /* Warna latar belakang abu-abu muda */
+    margin-top: 20px; /* Menambahkan margin atas 20px */
+  }
+  
+  /* animasi header 1 */
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px); /* Mulai dari posisi sedikit di atas */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Kembali ke posisi normal */
+    }
+  }  
+
+  /* Responsif untuk layar kecil */
+  @media screen and (max-width: 600px) {
+   .icon-wrapper {
+     gap: 5vh; /* Mengurangi jarak antara ikon */
+     padding: 5px; /* Mengurangi padding pada layar kecil */
+    }
+   .icon-custom {
+     font-size: 2.5vh; /* Lebih kecil lagi untuk layar yang lebih kecil */
+     margin-right: 1.5vh;
+     margin-left: 1.5vh;
+    }
+
+    .card {
+     padding: 15px; /* Kurangi padding card pada layar kecil */
+    }
+  }
+
+
+  /* Layout responsif - ketika layar kurang dari 800px, kedua kolom akan ditumpuk di atas satu sama lain */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%; /* Lebar kolom kiri dan kanan menjadi 100% */
+      padding: 0; /* Menghapus padding */
+    }
+  }
+  
+  /* Layout responsif - ketika layar kurang dari 400px, tautan navigasi ditumpuk di atas satu sama lain */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none; /* Menghapus pengapungan tautan */
+      width: 100%; /* Lebar tautan menjadi 100% */
+    }
+  }
